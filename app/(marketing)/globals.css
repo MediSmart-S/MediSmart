@@ -1,0 +1,43 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.animate-spin3d {
+  animation: spin3d 6s ease-out infinite;
+}
+
+@keyframes spin3d {
+  0% {
+    transform: rotateX(-20deg) rotateY(0deg);
+  }
+  75% {
+    transform: rotateX(-20deg) rotateY(1turn);
+  }
+  100% {
+    transform: rotateX(-20deg) rotateY(1turn);
+  }
+}
+
+.calendar-container .gBLCdz {
+  border-color: theme("colors.slate.300");
+  height: auto;
+  padding-top: 0.375rem /* 6px */;
+  padding-bottom: 0.375rem /* 6px */;
+  padding-left: 0.75rem /* 12px */;
+  padding-right: 0.75rem /* 12px */;
+}
+.calendar-container.bigger .gBLCdz {
+  border-color: theme("colors.slate.300");
+  height: auto;
+  padding-top: 0.625rem /* 10px */;
+  padding-bottom: 0.625rem /* 10px */;
+  padding-left: 1rem /* 16px */;
+  padding-right: 1rem /* 16px */;
+}
+
+.calendar-container .gBLCdz:hover {
+  border-color: theme("colors.primary.500");
+}
+.calendar-container .gBLCdz:focus {
+  border-color: theme("colors.primary.500");
+}
