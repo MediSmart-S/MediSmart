@@ -27,7 +27,7 @@ const NavigationBar = () => {
   }, []);
 
   return (
-    <div ref={headerContainer} className="container mt-6">
+    <div ref={headerContainer} className="container sticky top-0 left-0 mt-6">
       <div className="sticky top-0 start-0 flex justify-between items-center">
         <div className="flex justify-start items-center gap-6">
           <NavLink href="#">خانه</NavLink>

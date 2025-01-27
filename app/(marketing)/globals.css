@@ -19,6 +19,7 @@
 }
 
 .calendar-container .gBLCdz {
+  background-color: #ffffff;
   border-color: theme("colors.slate.300");
   height: auto;
   padding-top: 0.375rem /* 6px */;
@@ -27,8 +28,6 @@
   padding-right: 0.75rem /* 12px */;
 }
 .calendar-container.bigger .gBLCdz {
-  border-color: theme("colors.slate.300");
-  height: auto;
   padding-top: 0.625rem /* 10px */;
   padding-bottom: 0.625rem /* 10px */;
   padding-left: 1rem /* 16px */;
@@ -40,4 +39,28 @@
 }
 .calendar-container .gBLCdz:focus {
   border-color: theme("colors.primary.500");
+}
+
+.swiper-pagination {
+  position: static;
+  text-align: end;
+}
+
+.swiper-pagination-bullet {
+  width: 10px !important;
+  height: 10px !important;
+  background-color: theme("colors.primary.300");
+  opacity: 0.5;
+  transition: all 0.25s;
+}
+.swiper-pagination-bullet:hover {
+  background-color: theme("colors.primary.400");
+}
+
+.swiper-pagination-bullet.active-bullet {
+  width: 28px !important;
+  height: 10px;
+  background-color: theme("colors.primary.600");
+  border-radius: 6px;
+  opacity: 0.9;
 }

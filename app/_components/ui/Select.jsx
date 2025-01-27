@@ -3,7 +3,7 @@
 import { useEffect, useRef, useState } from "react";
 import { LuChevronDown } from "react-icons/lu";
 
-const Select = ({ options, placeholder }) => {
+const Select = ({ options, placeholder, bigger = false }) => {
   const defaultValue = {
     placeholder: placeholder ?? "انتخاب کنید",
     value: null,
@@ -36,7 +36,9 @@ const Select = ({ options, placeholder }) => {
   return (
     <div className="relative" ref={ref}>
       <div
-        className="relative w-full px-3 py-1.5 rounded-md outline-none border border-slate-300 hover:border-primary-500 focus:border-primary-500 cursor-pointer transition-all duration-300"
+        className={`relative w-full ${
+          bigger ? "px-4 py-2.5" : "px-3 py-1.5"
+        } bg-white rounded-md outline-none border border-slate-300 hover:border-primary-500 focus:border-primary-500 cursor-pointer transition-all duration-300`}
         onClick={toggleOptions}
       >
         <span className="select-none text-lg">{selected.placeholder}</span>

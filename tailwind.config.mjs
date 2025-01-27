@@ -7,6 +7,7 @@ export default {
         center: true,
         padding: {
           DEFAULT: "1rem",
+          "2xl": "7rem",
         },
       },
       colors: {
@@ -24,8 +25,12 @@ export default {
           950: "#022d31",
         },
       },
+      boxShadow: {
+        card: "0 1px 30px 0 #70707026",
+      },
       backgroundImage: {
         hero: "url('/images/hero-bg.jpg')",
+        footer: "url('/images/shapes/footer-bg.png')",
       },
     },
   },

@@ -1,10 +1,12 @@
 import LogoDivider from "./LogoDivider";
 
-const SectionHeader = ({ title, description }) => {
+const SectionHeader = ({ title, description, withDivider = true }) => {
   return (
-    <div className="mb-8">
-      <div className="bg-neutral-500/25 w-full h-px"></div>
-      <div className="container mt-24">
+    <div className="mb-4">
+      {withDivider ? (
+        <div className="bg-neutral-500/25 w-full h-px"></div>
+      ) : null}
+      <div className="container pt-24">
         <h1 className="font-semibold text-5xl text-center">{title}</h1>
         <div className="my-4">
           <LogoDivider />

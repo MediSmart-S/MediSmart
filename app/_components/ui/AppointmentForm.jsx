@@ -22,7 +22,7 @@ export const departmentOptions = [
   { placeholder: "شکستگی", value: "3" },
   { placeholder: "قلبی", value: "4" },
   { placeholder: "ریوی", value: "5" },
-  { placeholder: "اشعه X", value: "6" },
+  { placeholder: "اشعه ایکس", value: "6" },
 ];
 
 const AppointmentForm = () => {
@@ -35,7 +35,7 @@ const AppointmentForm = () => {
       onSubmit={(e) => {
         e.preventDefault();
       }}
-      className="w-full bg-white p-8 py-12 rounded-2xl"
+      className="w-full max-w-6xl p-8 py-12"
     >
       <h1 className="text-center text-3xl font-medium">رزرو قرار ملاقات</h1>
       <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mt-6">
@@ -85,7 +85,11 @@ const AppointmentForm = () => {
               دکتر
             </label>
           </div>
-          <Select placeholder="انتخاب دکتر" options={doctorOptions} />
+          <Select
+            bigger={true}
+            placeholder="انتخاب دکتر"
+            options={doctorOptions}
+          />
         </div>
         <div>
           <div className="flex justify-start items-end">
@@ -93,7 +97,11 @@ const AppointmentForm = () => {
               بخش درمانی
             </label>
           </div>
-          <Select placeholder="انتخاب بخش درمانی" options={departmentOptions} />
+          <Select
+            bigger={true}
+            placeholder="انتخاب بخش درمانی"
+            options={departmentOptions}
+          />
         </div>
       </div>
       <div className="mt-4">
@@ -105,7 +113,7 @@ const AppointmentForm = () => {
         <Textarea placeholder="چیزی بنویسید..." />
       </div>
       <div className="mt-4">
-        <Button className="w-full">بررسی پزشکان موجود</Button>
+        <Button>بررسی پزشکان موجود</Button>
       </div>
     </form>
   );
