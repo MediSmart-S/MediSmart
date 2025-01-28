@@ -9,8 +9,6 @@ const LoadingWrapper = ({ children }) => {
 
   useEffect(() => {
     const handleLoad = () => {
-      console.log("jehslkdjf");
-
       setIsLoading(false);
     };
 
