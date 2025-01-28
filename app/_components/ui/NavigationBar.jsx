@@ -2,9 +2,8 @@
 
 import Link from "next/link";
 import Logo from "./Logo";
-import { useEffect, useRef } from "react";
 
-const NavLink = ({ children, href }) => {
+export const NavLink = ({ children, href }) => {
   return (
     <Link
       href={href}
@@ -15,26 +14,39 @@ const NavLink = ({ children, href }) => {
   );
 };
 
+export const navigationLinks = [
+  {
+    placeholder: "خانه",
+    href: "#",
+  },
+  {
+    placeholder: "درباره ما",
+    href: "#",
+  },
+  {
+    placeholder: "قیمت ها",
+    href: "#",
+  },
+  {
+    placeholder: "بلاگ ها",
+    href: "#",
+  },
+  {
+    placeholder: "تماس با ما",
+    href: "#",
+  },
+];
+
 const NavigationBar = () => {
-  const headerContainer = useRef();
-
-  useEffect(() => {
-    const observer = new IntersectionObserver(() => console.log("hello"), {
-      // root: headerContainer.current,
-      threshold: 0.5,
-    });
-    observer.observe(headerContainer.current);
-  }, []);
-
   return (
-    <div ref={headerContainer} className="container sticky top-0 left-0 mt-6">
-      <div className="sticky top-0 start-0 flex justify-between items-center">
-        <div className="flex justify-start items-center gap-6">
-          <NavLink href="#">خانه</NavLink>
-          <NavLink href="#">درباره ما</NavLink>
-          <NavLink href="#">قیمت ها</NavLink>
-          <NavLink href="#">بلاگ ها</NavLink>
-          <NavLink href="#">تماس با ما</NavLink>
+    <div className="container relative z-30 bg-white pt-6 pb-4">
+      <div className="flex justify-center md:justify-between items-center">
+        <div className="hidden md:flex justify-start items-center gap-6">
+          {navigationLinks.map(({ href, placeholder }, i) => (
+            <NavLink key={i} href={href}>
+              {placeholder}
+            </NavLink>
+          ))}
         </div>
         <div>
           <Logo />

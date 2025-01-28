@@ -16,7 +16,7 @@ const Select = ({ options, placeholder, bigger = false }) => {
     document.addEventListener(
       "click",
       (e) => {
-        if (!ref.current.contains(e.target)) {
+        if (!ref?.current?.contains(e.target)) {
           setShowOptions(false);
         }
       },

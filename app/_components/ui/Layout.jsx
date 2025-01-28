@@ -1,13 +1,14 @@
 import Footer from "./Footer";
 import Header from "./Header";
+import LoadingWrapper from "./LoadingWrapper";
 
 const Layout = ({ children }) => {
   return (
-    <div>
+    <LoadingWrapper>
       <Header />
       {children}
       <Footer />
-    </div>
+    </LoadingWrapper>
   );
 };
 

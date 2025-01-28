@@ -8,7 +8,7 @@ import {
 } from "react-icons/fa";
 import { FaSquareXTwitter } from "react-icons/fa6";
 import ChevLink from "./ChevLink";
-import { LuChevronUp } from "react-icons/lu";
+import GoUpButton from "./GoUpButton";
 
 const usefulLinks = [
   {
@@ -133,9 +133,7 @@ const Footer = () => {
           <p className="text-sm text-neutral-500">
             کپی رایت 1403. طراحی شده توسط طاها
           </p>
-          <button className="flex justify-center items-center w-10 h-10 font-medium text-white bg-primary-500 rounded-full hover:-translate-y-0.5 will-change-transform transition-all duration-200">
-            <LuChevronUp className="w-6 h-6" />
-          </button>
+          <GoUpButton />
         </div>
       </div>
     </footer>
