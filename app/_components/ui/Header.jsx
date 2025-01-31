@@ -1,10 +1,11 @@
 "use client";
 
-import NavigationBar, { navigationLinks, NavLink } from "./NavigationBar";
+import NavigationBar, { navigationLinks } from "./NavigationBar";
 import TopTagged from "./TopTagged";
 import { useScroll } from "../context/ScrollContext";
 import { useState } from "react";
 import { FaBars } from "react-icons/fa6";
+import NavLink from "./NavLink";
 
 const Header = () => {
   const { scrollingSection } = useScroll();
@@ -13,9 +14,9 @@ const Header = () => {
   return (
     <header
       className={`bg-white sticky top-0 left-0 ${
-        scrollingSection["hero-section"]
-          ? "translate-y-0 md:-translate-y-16 shadow-neutral-200"
-          : "shadow-transparent"
+        scrollingSection === "hero-section"
+          ? "shadow-transparent"
+          : "translate-y-0 md:-translate-y-16 shadow-neutral-200"
       } shadow-lg z-20 transition-all duration-500`}
     >
       <TopTagged />

@@ -3,10 +3,14 @@ import H1 from "../H1";
 
 import avatar1 from "@/public/images/avatars/avatar1.png";
 import WeeklyTimetable from "../WeeklyTimetable";
+import Section from "./Section";
 
 const AboutSection = () => {
   return (
-    <section className="container flex flex-col lg:flex-row justify-between items-center gap-8 lg:gap-0 pb-24">
+    <Section
+      id="about-section"
+      className="container flex flex-col lg:flex-row justify-between items-center gap-8 lg:gap-0 py-24"
+    >
       <div className="w-full lg:w-7/12">
         <H1>
           بیمارستان یک مؤسسه مراقبت بهداشتی است که خدمات درمانی بیمار را با
@@ -37,7 +41,7 @@ const AboutSection = () => {
       <div className="w-full lg:w-5/12">
         <WeeklyTimetable />
       </div>
-    </section>
+    </Section>
   );
 };
 

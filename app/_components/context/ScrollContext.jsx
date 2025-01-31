@@ -4,11 +4,20 @@ import { createContext, use, useState } from "react";
 
 const ScrollContext = createContext();
 
+const sections = {
+  "hero-section": false,
+  "about-section": false,
+  "departments-section": false,
+  "appointment-section": false,
+  "patients-section": false,
+  "specialists-section": false,
+};
+
 const ScrollProvider = ({ children }) => {
-  const [scrollingSection, setScrollingSection] = useState({
-    "hero-section": false,
-  });
+  const [scrollingSection, setScrollingSection] = useState("hero-section");
   const [scrollableElements, setScrollableElements] = useState({});
+
+  const [passedSections, setPassedSections] = useState([]);
 
   return (
     <ScrollContext.Provider
@@ -17,6 +26,8 @@ const ScrollProvider = ({ children }) => {
         setScrollingSection,
         scrollableElements,
         setScrollableElements,
+        passedSections,
+        setPassedSections,
       }}
     >
       {children}

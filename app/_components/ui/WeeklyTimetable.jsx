@@ -59,13 +59,13 @@ const WeeklyTimetable = () => {
               </div>
             ))}
           </div>
-          <div className="flex justify-start items-center gap-4 py-4">
+          <div className="flex flex-col sm:flex-row justify-start items-center gap-4 py-4">
             <div>
               <span className="[&_svg]:fill-slate-800 [&_svg]:w-9 [&_svg]:h-9">
                 <PhoneTimetable />
               </span>
             </div>
-            <div>
+            <div className="text-center sm:text-start">
               <p className="text-neutral-500">حالا زنگ بزن</p>
               <p className="font-semibold text-2xl text-primary-500" dir="ltr">
                 (+01) - 234 567 890

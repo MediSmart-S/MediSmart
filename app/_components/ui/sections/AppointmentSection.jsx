@@ -1,20 +1,14 @@
-"use client";
-
 import Image from "next/image";
 import AppointmentForm from "../AppointmentForm";
 import SectionHeader from "../SectionHeader";
 
 import footerImage from "@/public/images/shapes/section_shape.png";
 import headImage from "@/public/images/shapes/contact-shape3.svg";
-import useScroll from "@/app/_hooks/useScrollTo";
-import { useRef } from "react";
+import Section from "./Section";
 
 const AppointmentSection = () => {
-  const sectionRef = useRef();
-  useScroll("appointment-section", sectionRef);
-
   return (
-    <section ref={sectionRef} className="relative bg-slate-50">
+    <Section id="appointment-section" className="relative bg-slate-50">
       <div className="relative z-10">
         <SectionHeader
           title="رزرو قرار ملاقات"
@@ -33,7 +27,7 @@ const AppointmentSection = () => {
       <div className="container flex justify-center relative">
         <AppointmentForm />
       </div>
-    </section>
+    </Section>
   );
 };
 

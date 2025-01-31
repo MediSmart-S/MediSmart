@@ -1,39 +1,26 @@
-"use client";
-
-import Link from "next/link";
 import Logo from "./Logo";
-
-export const NavLink = ({ children, href }) => {
-  return (
-    <Link
-      href={href}
-      className="font-semibold text-slate-500 hover:text-slate-800 duration-200"
-    >
-      {children}
-    </Link>
-  );
-};
+import NavLink from "./NavLink";
 
 export const navigationLinks = [
   {
-    placeholder: "خانه",
-    href: "#",
+    placeholder: "جدول زمانی",
+    href: "about-section",
   },
   {
-    placeholder: "درباره ما",
-    href: "#",
+    placeholder: "بخش های درمانی",
+    href: "departments-section",
   },
   {
-    placeholder: "قیمت ها",
-    href: "#",
+    placeholder: "رزرو قرار",
+    href: "appointment-section",
   },
   {
-    placeholder: "بلاگ ها",
-    href: "#",
+    placeholder: "متخصصان",
+    href: "specialists-section",
   },
   {
-    placeholder: "تماس با ما",
-    href: "#",
+    placeholder: "نظر بیماران",
+    href: "patients-section",
   },
 ];
 

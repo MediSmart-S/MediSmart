@@ -9,36 +9,38 @@ import avatar3 from "@/public/images/avatars/avatar3.png";
 import avatar4 from "@/public/images/avatars/avatar4.png";
 import PeopleSayItem from "./PeopleSayItem";
 
+const job = "بیمار";
+
 const people = [
   {
     fullName: "مهدی اسدی",
     image: avatar2,
-    job: "طراح",
+    job,
   },
   {
     fullName: "فاطمه مهدوی",
     image: avatar3,
-    job: "مدیر اجرایی",
+    job,
   },
   {
     fullName: "علی عباسی",
     image: avatar4,
-    job: "کد نویس",
+    job,
   },
   {
     fullName: "مهدی اسدی",
     image: avatar2,
-    job: "طراح",
+    job,
   },
   {
     fullName: "فاطمه مهدوی",
     image: avatar3,
-    job: "مدیر اجرایی",
+    job,
   },
   {
     fullName: "علی عباسی",
     image: avatar4,
-    job: "کد نویس",
+    job,
   },
 ];
 

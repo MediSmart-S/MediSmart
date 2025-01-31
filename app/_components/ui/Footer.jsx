@@ -131,7 +131,7 @@ const Footer = () => {
       <div className="bg-slate-400/10 w-full">
         <div className="container flex justify-between items-center py-5">
           <p className="text-sm text-neutral-500">
-            کپی رایت 1403. طراحی شده توسط طاها
+            کپی رایت 1403. شرکت بهداشتی درمانی مدی اسمارت
           </p>
           <GoUpButton />
         </div>

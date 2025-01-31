@@ -1,6 +1,7 @@
 import AlarmBenefit from "../../svg/AlarmBenefit";
 import DoctorBenefit from "../../svg/DoctorBenefit";
 import PhoneBenefit from "../../svg/PhoneBenefit";
+import Section from "./Section";
 
 const BenefitItem = ({
   icon,
@@ -29,7 +30,10 @@ const BenefitItem = ({
 
 const BenefitsSection = () => {
   return (
-    <section className="container grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-8 lg:gap-0 my-24">
+    <Section
+      id="benefits-section"
+      className="container grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-8 lg:gap-0 mt-24"
+    >
       <BenefitItem
         title="دکتران متخصص"
         icon={<DoctorBenefit />}
@@ -46,7 +50,7 @@ const BenefitsSection = () => {
         className="bg-[#e6492d24]"
         containerClassName="col-span-1 lg:col-span-2 xl:col-span-1"
       />
-    </section>
+    </Section>
   );
 };
 

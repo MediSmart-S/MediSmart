@@ -1,33 +1,14 @@
 "use client";
 
-import MiniAppointmentForm from "../MiniAppointmentForm";
 import ButtonSecondary from "../ButtonSecondary";
-import { useScroll } from "../../context/ScrollContext";
-import { useInView } from "react-intersection-observer";
-import { useState } from "react";
-import useScrollTo from "@/app/_hooks/useScrollTo";
+import MiniAppointmentForm from "../MiniAppointmentForm";
+import Section from "./Section";
 
 const HeroSection = () => {
-  const { scrollToElement } = useScrollTo();
-  const { setScrollingSection } = useScroll();
-  const [firstSeen, setFirstSeen] = useState(false);
-  const [heroSection] = useInView({
-    threshold: 0.5,
-    onChange: (inView, entry) => {
-      if (firstSeen) {
-        setScrollingSection((s) => ({
-          ...s,
-          "hero-section": !s["hero-section"],
-        }));
-      } else {
-        setFirstSeen(true);
-      }
-    },
-  });
-
   return (
-    <section
-      ref={heroSection}
+    <Section
+      id="hero-section"
+      stopInit={true}
       className="bg-hero bg-fixed bg-cover bg-center bg-no-repeat"
     >
       <div className="container flex flex-col xl:flex-row justify-between items-center py-16 xl:py-36">
@@ -51,7 +32,7 @@ const HeroSection = () => {
           <MiniAppointmentForm />
         </div>
       </div>
-    </section>
+    </Section>
   );
 };
 

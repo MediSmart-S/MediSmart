@@ -19,14 +19,14 @@ const TopTagged = () => {
       <div className="flex justify-start items-center gap-8">
         <Link
           href="#"
-          className="flex justify-start items-center gap-2 font-thin text-slate-800 hover:text-primary-400 transition-all duration-200"
+          className="flex justify-start items-center gap-2 font-thin text-slate-800 hover:text-primary-600 transition-all duration-200"
         >
           <span dir="ltr">+01 - 234 567 890</span>
           <PhoneSvg />
         </Link>
         <Link
           href="#"
-          className="flex justify-start items-center gap-2 font-thin text-slate-800 hover:text-primary-400 transition-all duration-200"
+          className="flex justify-start items-center gap-2 font-thin text-slate-800 hover:text-primary-600 transition-all duration-200"
         >
           <span>info@nischinto.com</span>
           <MailSvg />
