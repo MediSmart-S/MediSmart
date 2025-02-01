@@ -9,7 +9,7 @@ const Section = ({
   children,
   id,
   className = "",
-  stopInit = false,
+  stopInit = true,
   threshold = 0.55,
 }) => {
   const [firstSeen, setFirstSeen] = useState(false);

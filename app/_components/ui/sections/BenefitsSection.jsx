@@ -30,10 +30,7 @@ const BenefitItem = ({
 
 const BenefitsSection = () => {
   return (
-    <Section
-      id="benefits-section"
-      className="container grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-8 lg:gap-0 mt-24"
-    >
+    <section className="container grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-8 lg:gap-0 mt-24">
       <BenefitItem
         title="دکتران متخصص"
         icon={<DoctorBenefit />}
@@ -50,7 +47,7 @@ const BenefitsSection = () => {
         className="bg-[#e6492d24]"
         containerClassName="col-span-1 lg:col-span-2 xl:col-span-1"
       />
-    </Section>
+    </section>
   );
 };
 
